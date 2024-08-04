@@ -5,10 +5,8 @@ const ProfileComponent = () => {
         <div className="profile">
             <div className="profile-info">
                 <img src={avatar} alt="" />
-                <div>
-                    <p>Report for</p>
-                    <h1>Stacy Castillo</h1>
-                </div> 
+                <p>Report for</p>
+                <h1>Stacy Castillo</h1>
             </div>            
             <div className="timelines">
                 <ul>
