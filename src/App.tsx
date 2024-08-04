@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaLightbulb } from "react-icons/fa";
 import { MdNightlight } from "react-icons/md";
+import ProfileComponent from './components/ProfileComponent';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -18,7 +19,7 @@ function App() {
       </header>
 
      <section className='wrapper'>
-          Welcome
+            <ProfileComponent />
      </section>
     </main>
   );

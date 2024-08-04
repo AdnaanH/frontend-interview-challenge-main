@@ -19,13 +19,15 @@ $white-dark: hsl(0, 0%, 100%);
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-family: "Rubik", sans-serif;
+  list-style: none;
 }
 
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -50,11 +52,70 @@ body, html {
 
   button {
     border: none;
-    width: 50px;
-    height: 50px;
+    padding: 7px 10px;
     font-size: 1.5rem;
     border-radius: 50%;
     transition: background 0.3s ease, color 0.3s ease;
     cursor: pointer;
+  }
+}
+.wrapper {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+
+  .profile {
+    background-color: $dark-blue-light;
+    border-radius: 10px;
+
+    .profile-info {
+      background-color: $blue-light;
+      border-radius: 10px;
+      padding: 20px; 
+
+      img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-bottom: 10px; 
+      }
+
+      p {
+        color: $pale-blue-light;
+        margin: 0; 
+        font-size: 1.2em; 
+      }
+
+      h1 {
+        font-size: 3em;
+        font-weight: 400;
+        margin: 5px 0 0 0; 
+        line-height: 1.2; 
+        margin-bottom: 15px;
+      }
+    }
+
+    .timelines {
+      padding: 15px;
+      ul {
+        list-style: none;
+        padding: 0; 
+        margin: 10px 0;
+        display: grid; 
+        gap: 10px; 
+
+        li {
+          cursor: pointer;
+          color: $white-dark;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $pale-blue-light;
+          }
+        }
+      }
+    }
   }
 }
