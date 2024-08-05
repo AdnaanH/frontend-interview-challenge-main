@@ -61,6 +61,7 @@ body, html {
 }
 .wrapper {
   width: 70%;
+  height: 70vh;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
@@ -116,6 +117,17 @@ body, html {
           }
         }
       }
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+    .card {
+      text-align: left;
+      background: $blue-light;
     }
   }
 }

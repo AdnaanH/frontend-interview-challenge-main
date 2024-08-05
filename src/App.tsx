@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { FaLightbulb } from "react-icons/fa";
 import { MdNightlight } from "react-icons/md";
 import ProfileComponent from './components/ProfileComponent';
+import CardsComponent from './components/CardsComponent';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -20,6 +21,7 @@ function App() {
 
      <section className='wrapper'>
             <ProfileComponent />
+            <CardsComponent />
      </section>
     </main>
   );
