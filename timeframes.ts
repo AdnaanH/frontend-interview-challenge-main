@@ -1,4 +1,19 @@
-const timeframes = [
+type TimeframeDetail = {
+  current: number;
+  previous: number;
+};
+
+type TimeframeSet = {
+  daily: TimeframeDetail;
+  weekly: TimeframeDetail;
+  monthly: TimeframeDetail;
+};
+
+type Timeframe = {
+  title: string;
+  timeframes: TimeframeSet;
+};
+export const timeframes: Timeframe[] = [
   {
     title: 'job',
     timeframes: {
