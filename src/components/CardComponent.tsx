@@ -6,6 +6,7 @@ type CardProps = {
     prevTimeframe: number;
     image: string;
     bgColor: string;
+    frequency: string;
 }
 
 const CardComponent: React.FC<CardProps> = ({
@@ -13,7 +14,8 @@ const CardComponent: React.FC<CardProps> = ({
     currTimeframe, 
     prevTimeframe, 
     image, 
-    bgColor 
+    bgColor,
+    frequency 
 }) => {
     return ( 
         <div className="card">
@@ -30,7 +32,7 @@ const CardComponent: React.FC<CardProps> = ({
                     <h2>Completed</h2>
                 </div>
                 <div className="previous">
-                    <span>Last week: {prevTimeframe} Completed</span>
+                    <span>{frequency}: {prevTimeframe} Completed</span>
                 </div>
             </div>
         </div> 

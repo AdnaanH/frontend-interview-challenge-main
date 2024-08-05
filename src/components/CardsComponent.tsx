@@ -33,6 +33,13 @@ type CardsComponentProps = {
 };
 
 const CardsComponent: React.FC<CardsComponentProps> = ({ selectedTimeframe }) => {
+  // Determine the frequency label based on selectedTimeframe
+  const frequencyLabel: Record<CardsComponentProps["selectedTimeframe"], string> = {
+    daily: 'Yesterday',
+    weekly: 'Last week',
+    monthly: 'Last month'
+  };
+
   return (
     <div className="cards">
       {timeframes.map((item, index) => {
@@ -47,6 +54,7 @@ const CardsComponent: React.FC<CardsComponentProps> = ({ selectedTimeframe }) =>
             prevTimeframe={timeframeData.previous}
             bgColor={titleToColor[title]}
             image={titleToImage[title]}
+            frequency={frequencyLabel[selectedTimeframe]} 
           />
         );
       })}
