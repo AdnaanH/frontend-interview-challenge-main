@@ -126,8 +126,62 @@ body, html {
     gap: 20px;
 
     .card {
-      text-align: left;
-      background: $blue-light;
+      background-color: $dark-blue-light;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: $blue-light;
+      }
+
+      .card-icon {
+        height: 50px;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .card-desc {
+        background-color: $dark-blue-light;
+        border-radius: 10px;
+        padding: 18px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $blue-light;
+        }
+
+        .card-title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          span {
+            color: $white-dark;
+            font-weight: 700;
+          }
+        }
+
+        .current {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          gap: 10px;
+
+          h1 {
+            font-size: 2.5em;
+            line-height: .5em;
+            font-weight: 300;
+          }
+
+          h2 {
+            font-weight: 300;
+          }
+        }
+
+        .previous {
+          span {
+            font-size: 1em;
+          }
+        }
+      }
     }
   }
 }

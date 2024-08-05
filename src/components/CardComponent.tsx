@@ -1,9 +1,23 @@
 import menu from '../assets/images/menu.svg'
 
-const CardComponent = ({title, currTimeframe, prevTimeframe, image, bgColor }) => {
+type CardProps = {
+    title: string;
+    currTimeframe: number;
+    prevTimeframe: number;
+    image: string;
+    bgColor: string;
+}
+
+const CardComponent: React.FC<CardProps> = ({
+    title, 
+    currTimeframe, 
+    prevTimeframe, 
+    image, 
+    bgColor 
+}) => {
     return ( 
-        <div className="card" style={{backgroundColor: bgColor}}>
-            <div className="card-icon" style={{backgroundImage: image}}>
+        <div className="card">
+            <div className="card-icon" style={{backgroundColor: bgColor, backgroundImage: image}}>
 
             </div>
             <div className="card-desc">
