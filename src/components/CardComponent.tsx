@@ -17,8 +17,8 @@ const CardComponent: React.FC<CardProps> = ({
 }) => {
     return ( 
         <div className="card">
-            <div className="card-icon" style={{backgroundColor: bgColor, backgroundImage: image}}>
-
+            <div className="card-icon" style={{backgroundColor: bgColor}}>
+                <img src={image} alt={title} />
             </div>
             <div className="card-desc">
                 <div className="card-title">
